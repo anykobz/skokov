@@ -1,0 +1,1152 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+$light-color: #fff;
+$color-button: #65e49d;
+$color-acent:#65e496;
+$light-color-grey:#f5f6fa;
+$grey-text:#44444f;
+$text-darck-color:#696980;
+$text-black: #44444f;
+$fon-black: #44444f;
+$gradient: linear-gradient(to top left, #65e4ce, #65e4a1);
+* {
+
+margin: 0;
+
+padding: 0;
+
+}
+body
+{
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  line-height: 24px;
+  @media(max-width: 1110px)
+  {
+    font-size: 24px;
+  }
+}
+
+h3
+{
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: $grey-text;
+}
+.wrap
+{
+
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.page-main
+{
+  background-image: url('../img/fon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:$light-color;
+
+}
+// --------------start шапка-----------------
+.header
+{
+  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 15px 181px;
+  font-size: 13px;
+  @media(max-width:920px)
+  {
+    flex-direction: column;
+  }
+&__logo{
+    background-image: url('../img/Logo.svg');
+    background-repeat: no-repeat;
+    display:block;
+    height: 28px;
+    width: 137px;
+  }
+  &-list
+  {
+    padding-left: 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Open Sans", serif;
+    @media(max-width: 660px)
+    {
+      flex-flow: wrap;
+    justify-content: center;
+    }
+    &__link
+    {
+      color:$light-color;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      font-size: 16px;
+    }
+    &__item
+    {
+      border-bottom:3px solid transparent;
+      margin-left:16px;
+      padding-bottom: 5px;
+      transition: 0.3s;
+      &.active
+        {
+
+          border-bottom:3px solid $color-acent;
+        }
+        &:hover
+        {
+            border-bottom:3px solid $color-acent;
+        }
+    }
+
+
+  }
+
+}
+//-----------------end шапка---------------------------
+
+
+
+//----------------start главный блок-------------------
+.block
+{
+  position: relative;
+  display: block;
+  &_padding
+  {
+        padding-bottom: 161px;
+  }
+  &__svg{
+    top:0;
+    z-index: -1;
+    width:100%;
+    //height:100%;
+    position: absolute;
+    @media(max-width: 1110px)
+    {
+      display: none;
+    }
+  }
+
+  &__btn
+  {
+
+
+      display: block;
+      background: $gradient;
+      padding:16px 36px;
+      color: $light-color;
+      max-width: 222px;
+      margin:0 auto;
+      text-decoration: none;
+      border-radius: 3px;
+      text-align: center;
+    //  margin-bottom: 161px;
+      font-size: 18px;
+      box-shadow: 0px 2px 0px 0px #b2f1be;
+
+
+    //  position:relative;
+    //  &::before
+    /*  {
+        position:absolute;
+        z-index:-1;
+        left: 0;
+        bottom:-2px;
+        content:"";
+        display:block;
+        height: 20px;
+        width: 100%;
+        background-color: #b2f1be;
+        border-radius: 3px;
+      }*/
+  }
+
+  &_grey
+  {
+  background: $light-color-grey;
+  padding-top: 156px;
+  margin-top: 180px;
+}
+  &__title
+  {
+    font-family: 'Roboto Slab', serif;
+    font-size: 48px;
+    color: #44444f;
+    text-align: center;
+    &_margin
+    {
+      margin-top:155px;
+
+    }
+}
+  &__subtitle
+  {
+    padding-top: 11px;
+    margin-top: 23px;
+    margin-bottom: 45px;
+    letter-spacing: 0.9px;
+    display:block;
+    font-size:18px;
+  color: $color-acent;
+  text-align: center;
+  }
+  //button{
+    //background: $color-button;
+  /*  background: $gradient;
+    color: $light-color;
+    border: none;
+    letter-spacing: 0.04em;
+    font-size: 18px;
+    margin-top:37px;
+    padding:17px 46px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 0px 0px #b2f1be;
+    margin-bottom: 256px;
+  }*/
+}
+//-----------------------end главный блок----------------------------
+
+//------------------------ start текстовый блок----------------------
+  .block-text
+  {
+    padding-left: 52px;
+    padding-bottom: 29px;
+  //  max-width: 571px;
+  text-align: justify;
+
+  flex-basis: calc(93% - 512px);
+  @media(max-width: 1110px)
+  {
+
+
+  }
+    &__name
+    {
+       font-family: "Open Sans", serif;
+       font-size:18px;
+       margin-bottom: 36.6px;
+       @media(max-width: 760px)
+       {
+
+         text-align: center;
+         margin-top: 50px;
+
+
+       }
+       &-top
+        {
+         margin-top: 20px;
+         color:#696980;
+
+       }
+    }
+    &__title
+    {
+      margin-bottom: 40px;
+      letter-spacing: 1.8px;
+      font-size:48px;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: left;
+      @media(max-width: 760px)
+      {
+        text-align: center;
+
+      }
+      &-top{
+
+      color: #44444f;
+}
+      span
+      {
+        margin-bottom: 45px;
+        letter-spacing: 0.9px;
+        display:block;
+        font-size:18px;
+        font-weight: 400;
+      color: $color-acent;
+
+      }
+
+    }
+    &__description
+    {
+    font-family: "Open Sans", serif;
+    font-size:15px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    &-top {
+    color:$text-darck-color;
+    margin-top: 20px;
+    }
+    &-color
+    {color:$text-darck-color;}
+  }
+  &__btn
+  {
+    padding:15px 28px;
+    display: block;
+    background: $gradient;
+    color: $light-color;
+    text-decoration: none;
+    max-width: 250px;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 18px;
+    box-shadow: 0px 2px 0px 0px #b2f1be;
+    margin-top: 52px;
+    @media(max-width: 1110px)
+    {
+
+      margin: 47px auto 19px;
+    }
+    &-top
+    {
+    margin-top:45px;
+
+    }
+
+  }
+  &-item
+  {
+
+    &__date
+    {
+    font-family: "Open Sans", serif;
+    font-size: 15px;
+    color: $text-darck-color;
+    letter-spacing: 0.05em;
+  }
+    &__title
+    {
+      font-family: 'Roboto Slab', serif;
+      font-size: 18px;
+      margin: 0px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      color:$text-black;
+      margin-top: 5px;
+      line-height: 50px;
+    }
+    &__but
+    {
+      width: 139px;
+      padding:15px 28px;
+      display: block;
+      background: $gradient;
+      color: $light-color;
+      text-decoration: none;
+      max-width: 250px;
+      border-radius: 3px;
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top:30px;
+      font-size: 18px;
+      box-shadow: 0px 2px 0px 0px #b2f1be;
+
+    }
+  }
+}
+//----------------------------end текстовый блок----------------------
+
+
+//-----------------------------start оформление книги-----------------
+.block-book
+{
+
+  padding-bottom: 162px;
+  display: flex;
+  justify-content: space-between;
+padding-right: 102px;
+@media(max-width: 1110px)
+{
+  flex-direction: column-reverse;
+  align-items: center;
+
+}
+  &-demo
+  {
+    position:relative;
+    display: block;
+    min-height: 639px;
+    min-width: 445px;
+    background-image: url('../img/book.svg');
+    background-repeat: no-repeat;
+    flex-basis: 447px;
+    @media(max-width: 1110px)
+    {
+      margin: 0 auto;
+
+    }
+
+    &__title{
+    //  margin-left:130px;
+      position: absolute;
+      text-align: center;
+      left:130px;
+      top:118px;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+    }
+    &__subtitle{
+    //  margin-left:130px;
+    display: block;
+    margin-top: 13px;
+    font-size: 14px;
+    color: $color-acent;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+    text-transform:none;
+    font-family: "Open Sans", serif;
+
+    }
+    &__autor{
+      position: absolute;
+      bottom:56px;
+      left:85px;
+      font-size: 14px;
+      color: $color-acent;
+      letter-spacing: 0.05em;
+      line-height: 24px;
+      text-transform:none;
+      font-family: "Open Sans", serif;
+    }
+  }
+
+}
+//-----------------------------end оформление книги-----------------
+
+//-----------------------------start автор-----------------
+.block-autor
+
+{
+  margin-top: 383px;
+  display: flex;
+  justify-content: space-between;
+@media(max-width: 760px)
+{
+  flex-direction: column-reverse;
+  margin-top: 40px;
+  padding: 0;
+}
+
+&-img
+{
+ @media(max-width: 1160px)
+ {
+   padding-right: 20px;
+   padding-left: 20px;
+ }
+ @media(max-width: 760px)
+ {
+   max-width: 250px;
+   margin: 0 auto;
+   margin-bottom: 70px;
+
+ }
+  &__svg{
+    position: absolute;
+    @media(max-width: 1160px)
+    {
+      width:300px;
+      height: 412px;
+    }
+  }
+  &__png{position: relative;
+    right: 44px;
+    top: 44px;
+    @media(max-width: 1160px)
+    {
+      width:300px;
+
+    }
+    &--left
+    {
+      position: relative;
+        left: 50px;
+        top: 50px;
+        bottom: 50px;
+    }
+  }
+}
+}
+//-----------------------end блок автор--------------------------
+
+//---------------------start счётчик--------------------------------
+.block-count
+{
+  margin-bottom: 161px;
+  margin-top: 159px;
+  display: flex;
+  justify-content: space-around;
+  @media(max-width: 750px)
+  {
+    flex-direction: column;
+  }
+  p
+  {
+    font-family: 'Open Sans', serif;
+    text-align: center;
+    font-size: 18px;
+    color: #696980;
+    letter-spacing: 0.04em;
+    @media(max-width: 750px)
+    {
+      margin-bottom: 80px;
+    }
+  }
+  span
+  {
+    margin-bottom: 32px;
+    display: block;
+    font-size: 80px;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.04em;
+    font-weight: 100;
+    color: #65e49d;
+  }
+}
+// ------------------------end счётчик-----------------------------
+
+
+.block-about
+{
+
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 1160px)
+  {
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 750px;
+
+  }
+  &-text
+  {
+    color: $text-darck-color;
+    flex-basis: calc(100% - 590px);
+    @media(max-width: 1160px)
+    {
+
+    flex-basis: 100%;
+
+    }
+
+
+    .in-lain
+    {
+
+
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        width: 250px;
+    &__subtitle
+    {
+
+      font-family: 'Roboto Slab', serif;
+      font-size:18px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 24px;
+      color: $grey-text;
+    }
+    &__list
+    {
+      display: flex;
+
+      justify-content:flex-start;
+
+    &>li
+    {
+      color: $color-button;
+      list-style-type:none;
+      margin-left:24px;
+    }
+  }
+}
+}
+  &-table
+  {
+    flex-basis: 570px;
+    @media(max-width: 1160px)
+    {
+
+    margin-top: 52px;
+    flex-basis: 100%;
+
+    }
+
+    button{
+      background: $gradient;
+        color: $light-color;
+        border: none;
+        letter-spacing: 0.04em;
+        font-size: 18px;
+        margin-top:37px;
+        padding:17px 46px;
+        border-radius: 3px;
+        box-shadow: 0px 2px 0px 0px #b2f1be;
+        margin-bottom: 256px;
+    }
+    &__list
+    {
+      margin:0;
+      padding: 0;
+      margin-top: 29px;
+      column-gap: 19px;
+
+      counter-reset: list;
+      column-count: 2;
+      @media(max-width: 740px)
+      {
+        column-count: 1;
+      }
+
+     &>li
+    {
+      color: $text-darck-color;
+      margin-bottom:10px;
+      position: relative;
+      padding-left: 21px;
+      counter-increment: list;
+      list-style-type:none;
+      @media(max-width: 1110px)
+      {
+        padding-left: 30px;
+      }
+      &::before
+      {
+        content: counter(list) ". ";
+        margin-left: 14px;
+
+      }
+      &::after
+      {
+        content: "+";
+        position: absolute;
+        background-color: #5acab1;
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        line-height: 24px;
+        align-content: center;
+        padding:0px 7px;
+        left:0;
+        top: calc(50% - 10px);
+        color: $light-color;
+      }
+
+      }
+    }
+  }
+  &-more
+  {
+    display:none;
+    position: relative;
+    &::before
+    {
+      content:"";
+    width:100px;
+    height:2px;
+    background-color: #5acab1;
+    display: block;
+    position: absolute;
+    top:-16px;
+  }
+  }
+}
+
+
+//----------------start больше книг--------------------
+.more-books
+{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 86px;
+  @media(max-width: 920px)
+  {
+  flex-direction: column;
+  align-items: center;
+}
+  &__item
+   {
+     width: 312px;
+
+  }
+  &-img
+  {
+    margin-left: 22px;
+    position: relative;
+    background-image: url('../img/book_img.svg');
+    height: 409px;
+    width: 269px;
+    &__title
+    {
+      font-family: 'Roboto Slab', serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      position: absolute;
+      color: $light-color;
+      right:40px;
+      top:74px;
+      text-align: center;
+    }
+    &__subtitle
+    {
+      margin-top: 14px;
+      text-transform: none;
+      display: block;
+      color:$color-acent;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 24px;
+    }
+    &__autor
+    {
+      position: absolute;
+      color: $color-acent;
+      left:81px;
+      bottom:17px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 24px;
+    }
+  }
+
+  &__title
+  {
+    margin-top: 37px;
+    text-align: center;
+  }
+  &__desc
+  {
+    margin-top:20px;
+    align: center;
+    text-align: center;
+    width: 312px;
+    color: $text-darck-color;
+    margin-bottom: 26.31px;
+  //  padding-right: 49px;
+
+  }
+  &__btn
+  {text-align: center;
+  margin-bottom: 90px;
+
+}
+  &__link
+  {
+    margin-top:20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:$color-acent;
+    font-family: 'Open Sans', serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+  }
+}
+//----------------end больше книг--------------------
+
+
+
+//----------------start BLOG-------------------
+.block-blog
+{
+  display: flex;
+  justify-content: space-between;
+//  margin-bottom: 161px;
+@media(max-width: 900px)
+{
+  flex-direction: column;
+  max-width: 70%;
+  margin:0 auto;
+}
+&-item{
+  flex-basis: 32%;
+  @media(max-width: 900px)
+  {
+    margin-top: 80px;
+  }
+}
+  h4
+  {
+    margin-top: 21px;
+    color: $text-black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.05em;
+
+  }
+  &__desc
+  {
+    color: $text-darck-color;
+    font-family: "Open Sans", serif;
+    font-size:15px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+  }
+  &-info
+  {
+    font-size: 15px;
+    margin-top:10px;
+    flex-wrap: wrap;
+    p
+    {
+
+      color: $text-darck-color;
+     }
+     a
+     {
+       text-decoration: none;
+       color: $color-acent;
+     }
+
+  }
+
+
+  &-img {
+    width:100%;
+    height:224px;
+    overflow:hidden;
+    position: relative;
+      img
+      {
+        position:absolute;
+        width:100%;
+        height:224px;
+        object-fit: cover;
+        //left:50%;
+        //top:50%;
+        //transform: translate(-50% , -50%);
+      }
+  }
+  & + .block__btn
+  {
+      margin-top: 78px;
+
+
+  }
+
+}
+
+.block-letter
+{
+  margin-top: 160px;
+  display: flex;
+  justify-content: space-between;
+//  &__form
+//  {
+  //  display: flex;
+    //flex-direction: column;
+//  }
+@media(max-width: 1190px)
+{
+  flex-direction: column;
+  flex-basis: 0px;
+  align-items: center;
+}
+  &__item
+  {
+   width:551px;
+  }
+  &__title
+  {
+    font-family: 'Roboto Slab', serif;
+    font-size: 48px;
+    color: $text-black;
+    @media(max-width: 1190px)
+    {
+
+      text-align: center;
+    }
+  }
+  &__desc
+  {
+    //margin-left:225px;
+    font-family: "Open Sans", serif;
+    text-align: justify;
+    font-size:15px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color:$text-darck-color;
+    margin-top: 20px;
+    //margin-bottom: 161px;
+    @media(max-width: 1190px)
+    {
+
+      margin-top: 20px;
+    }
+  }
+  &__form
+  {
+    @media(max-width: 1190px)
+    {
+
+      margin-top: 20px;
+    }
+  }
+  &__input
+  {
+    display: block;
+    color:#9191b5;
+    background: $fon-black;
+    width: calc(571px - 28px - 28px);
+    border:none;
+    border-radius: 3px;
+  //  padding-top:16px;
+  //  padding-bottom: 16px;
+  //  padding-left: 28px;
+    padding: 16px 28px;
+    &:focus{
+      outline:none;
+    }
+    &::placeholder
+    {
+      color:#9191b5;
+    }
+  }
+  &__btn
+  {
+    width: 571px;
+    background: $gradient;
+      color: $light-color;
+      border: none;
+      letter-spacing: 0.04em;
+      font-size: 18px;
+      margin-top:20px;
+      padding:17px 46px;
+      border-radius: 3px;
+      box-shadow: 0px 2px 0px 0px #b2f1be;
+      margin-bottom: 256px;
+    &:focus{
+      outline:none;
+    }
+  }
+}
+
+
+//footer start
+
+.footer
+{
+
+  background-color: $fon-black;
+  &-block{
+    display:flex;
+  //  justify-content: space-between;
+  }
+  &-item
+  {
+    margin:160px 0;
+    flex-basis: 369px;
+    display:block;
+    &-left
+     {
+      margin-left:137px;
+    }
+    &-right
+    {
+      align:right;
+      margin-left: 80px;
+    }
+    &__title
+    {
+      font-size: 18px;
+      color: $color-acent;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: 'Roboto Slab', serif;
+
+    }
+    &__text
+    {
+      margin-top: 30px;
+      font-family: "Open Sans", serif;
+      font-weight: 600;
+      color:$text-darck-color;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      line-height: 24px;
+      &-copy
+      {
+
+      }
+    }
+
+    &__logo
+    {
+      background-image: url('../img/Logo_fut.svg');
+      background-repeat: no-repeat;
+      display:block;
+      height: 28px;
+      width: 137px;
+    }
+    &__list
+    {
+      margin-top: 30px;
+      font-family: "Open Sans", serif;
+      font-weight: 600;
+      color:$text-darck-color;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      line-height: 28px;
+      list-style-type: none;
+
+    }
+    &__social
+    {
+      margin-top: 18px;
+      display: flex;
+      list-style-type: none;
+      &>li
+       {
+         i
+         {
+        color:$color-acent;
+        height: 45px;
+        margin-right: 20px;
+      }
+      }
+    }
+  }
+}
+// ---------------------SLIDER-----------------
+
+
+.block-slider
+{
+
+  text-align: center;
+  margin-top: 161px;
+min-height: 694px;
+&-background
+{
+  @media(max-width: 1110px)
+  {
+    background-color: $fon-black;
+  }
+}
+  div
+  {
+
+      margin-top: 64px;
+  }
+&-ava
+{
+
+  display: block;
+  position: relative;
+  height: 152px;
+  width: 152px;
+  margin: 0 auto 29px;
+}
+  &-thumb
+  {
+
+    display: block;
+    img
+    {
+
+      border-radius:50%;
+      overflow: hidden;
+      height: 152px;
+      width: 152px;
+      object-fit: cover;
+      margin: 0 auto;
+
+  }
+}
+    &-bq
+    {
+        display: block;
+        position:absolute;
+        height: 42px;
+        width: 48px;
+        background-image: url(../img/bq.png);
+        background-repeat: no-repeat;
+        top:0px;
+        right:-14px;
+    }
+    &__expert
+    {
+      margin-top: 9px;
+    }
+    &__desc
+    {
+      margin-top: 43px;
+    }
+
+
+  h3
+  {
+    color: $color-acent;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+  }
+  p {
+    font-family: "Open Sans", serif;
+    letter-spacing: 0.05em;
+    color: $text-darck-color;
+  }
+}
+// ---------------------SLIDER END-----------------
+
+
+//-----------------переключатели на слайдере---------------
+.slick-dots
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+  &>li
+  {
+    list-style-type: none;
+    margin: 0 5px;
+
+  &>button
+  {
+    text-indent: -9999px;
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: $color-acent;
+    border: none;
+    &:focus{
+      outline:none;
+    }
+  }
+
+}
+
+  &>li.slick-active
+  {
+    &>button
+    {
+    width: 37px;
+    border-radius: 4px;
+  }
+  }
+}
