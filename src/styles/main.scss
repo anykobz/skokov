@@ -342,7 +342,7 @@ background: url('../img/accentbg2.png');
   &-work
   {
     //margin-right:  59px;
-    //width: 1076px;
+    min-width: 576px;
   }
   &__subtitle
   {
@@ -373,11 +373,10 @@ margin-bottom:27px;
 &-clients
 {
   margin-left:59px;
+  //column-count: 3;
 &__carousel
 {
-  column-count: 3;
-//  font-size: 2px;
-  max-width: 552px;
+  max-width: 555px;
   img
   {
     max-width: 185px;
@@ -584,7 +583,7 @@ margin-bottom:27px;
   background:$darck-color url("../img/bg_foot.png");
   //background-attachment: scroll;
   background-repeat: no-repeat;
-  height:895px;
+  height: 805px;
   margin-top: 80px;
 &-content
 {
@@ -727,28 +726,60 @@ margin-bottom:27px;
   }
 
 }
-.footer__social
+}
+.foot
 {
-  display: inline-grid;
-  position: absolute;
+  min-height: 102px;
+  background-color: $darck-color;
+&-end
+{
+
+   display: flex;
+  justify-content:space-between;
+
+  &__social
+{
+  margin: 45px 0;
+  display: flex;
+  justify-content: flex-end;
+//  position: absolute;
   bottom: 15px;
   right: 200px;
-  color: $red-color;
+
+
+    &>li
+    {
+      color: $red-color;
+      list-style-type: none;
+    margin-left:14px;
+    i
+    {
+      &::after
+      {
+        content: "";
+        //color:$red-color;
+        border-right:1px solid $red-color;
+        margin-left:14px;
+      }
+    }
+  }
 }
 
-.footer__copy
+  &__copy
 {
-  position: absolute;
-  bottom: 15px;
-  left:200px;
+//  bottom: 15px;
+//  left:200px;
+  margin: 45px 0;
   color: $white-text-color;
+}
 }
 }
 
 
 .slick-dots
 {
-  display: block;
+  display: flex;
+  width: 100%;
   justify-content: center;
   margin-top: 56px;
   &>li
@@ -759,24 +790,41 @@ margin-bottom:27px;
   &>button
   {
     text-indent: -9999px;
-    height: 8px;
-    width: 20px;
+    height: 5px;
+    width: 36px;
     //border-radius: 8px;
-    background-color: $color-acent;
+    background-color: #AEAEAE;
     border: none;
     &:focus{
       outline:none;
     }
   }
-
 }
+
+
 
   &>li.slick-active
   {
     &>button
     {
-    width: 37px;
-    border-radius: 4px;
+      height: 5px;
+      width: 36px;
+      background-color: $red-color;
   }
   }
+}
+.slick-slider {
+    /* position: relative; */
+    height: 555px;
+    width: 560px;
+  }
+  .slide-item {
+	//background-color: rebeccapurple;
+	color: aqua;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+//	height: 200px;
+	border: 1px solid white;
 }
