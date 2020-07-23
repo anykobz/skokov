@@ -61,7 +61,7 @@
   <div class="wrap">
     <div class="head-info">
       <div class="head-info-text">
-      <h1>Global&nbsp;management  consulting agency
+      <h1><span>Global management</span>  consulting agency
       <p>Growth doesn't always go the way you expect. Our
 strategy consultants can help you climb.</p></h1>
 <div class="head-info-btn">
@@ -91,7 +91,7 @@ a multiplier effect from optimizing the sum of the parts, not just the individua
   <div class="our-servises-items">
 
     <div>
-      <svg width="55" height="55" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="925 1059 55 55">
+      <svg  width="55" height="55" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="925 1059 55 55">
     <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAEG0lEQVRoQ+2a3WscVRjGn+fMbtIqCOqNoC3+AdWiIIKVWhQVarszE2mbVlERP0orIoIhwZteiYG2oIL0wiuDVQzs7qQJeCG4WOxV1YDivb3wA7RVhNa4O+eRM5ukS7PJ7pLJfoQ5sLDDnDnn/c37zPu+58zQBv5PAO4CUMXmaTlAf9D6/q8g7tg8XMskVzK4AfXqSs9ReAvABRi7ZWCgyAXE3CHiTIPNTeEeZxR9OTBgi4ZqZN/9st63GVzmuT66A5ksKWQBpY8UmZiSyTKTpZOB7++1wEMgaxsmUSpvLC4yikqt5khNlvL9e0S4aiDfatI0ztPoYRZnvllrrDThnhTxBcCI5EeQbkoDArSqRwdDkFet4iMEDxM8xHL5867CSXjXi6KJVMCaDKKgMCHwHVIHWZqZ7i4cMemVovE04BQEhwW9ASAWcMkrR6MKgjFBkz2FUxA8YaEXAVxrAB0yJj7F4ux37cDHQWGK4LOLfS2ttoE8JOJ0b+HCcAcUPwbx+j4M6cGYGRaLPzeD04kTBpWKcedYqdRWwNXi7fC8g72H8/1Q1JsArwIkqByEYRqNNYtyCsPbBVuEkr2bIQrjFthD4mj/eS4I7ob0oHtekp/0V2JkHM9zbu6KXtizBX/fuh2mZhB7vyGO75RnflzyqIT3AXgkjvcfXFgYlTAOcAHQn6zGzzioJePjoDBJcAxADcTvFF8T9BmA4STy9zXcgQNbsbBwSwLjeTWUSpcJ1HOWc6Dvf0pidOmQ1CsSPwCQ5Me+hmsVDeOgcNYl4wyufgf6JxVknmuUJfiqIBchrz9zRI7AseVo2fM812ZtqdB/W8L+xQomJnVSwusAtzpAQlMgjYQjgP4FWGN+6GlUqy8JOtmbCgU4a8DTsPbmNaXpeRZ0JeNySDHwZJeP5TH539gH9pqNvaMkXu7uqiAMd0r2IoBcq+ctjfMUdjOKzq81VnrrOVc+yX4PYFsaxrcY4zJr8X2cnb3UFbg4CE4RrpbsThPxsVeKnt9wOI0UdsnyawBJRd+tRpr9LJVmV5svFVnawJ8DsLdbUA3zXDDlaNeGwSkMH5FspUMw69ZkxuIXGLkAFFvL28jkPeBQJ2ORNmDpXNTsmnV7zoa+W4OFnRgE4LwpR7tvvMYGhXMA93U0FvGVKUWPpg6nQuFeGbrtvI7CP4kJiGdQq9VXDa5J/yCfHxX0YUdwLhWukhbW5TmNFJ6S5aoP9BpGumTdLPi4ha3XMRz4HMvlqRuvWx+c2/OYnz9uoQdAdLLL7EGoVyCNjcl6zwG214ScoX5Abvg9Tk//lypcexb0rte6PNc7s9ubOYPLXmG1p5Su9spkmcmyq4Jrb7JMlgSPgayAVbd5MxitygUYs1PEJw0GZx+TDob3Vlq52T23ib9O/x/kPmUti0mAGgAAAABJRU5ErkJggg==" width="55" height="55" x="925" y="1059"/>
   </svg>
   <div class="our-servises-items__desc">
@@ -425,7 +425,7 @@ subscribe to a newsletter or connect with us on social media.
 
   </div>
 
-<div class="footer-content-item">
+<div class="footer-content-item footer-content-item_hide">
   <h4 class="footer-content-item__subtitle">contact</h4>
       <p class="footer-content-item__margin">
         Please contact us using contact form below.
@@ -479,7 +479,29 @@ subscribe to a newsletter or connect with us on social media.
     	//	infinite: true,
     		speed: 300,
     		slidesToShow: 3,
-    		slidesToScroll: 3
+    		slidesToScroll: 3,
+        responsive: [
+    {
+      breakpoint: 560,
+      settings: {
+        rows: 2,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+      }
+    },
+    {breakpoint: 394,
+    settings: {
+      rows: 3,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+    }
+  }
+  ]
+
   });
 
       });
