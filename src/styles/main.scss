@@ -217,8 +217,31 @@ width: 100%;
     justify-content: flex-end;
     @media(max-width: 1108px)
     {
+      display: block;
+      position: fixed;
+      z-index: 2;
 
-      display:none;
+      width: 100%;
+      height:100%;
+      top: -1000%;
+      text-align: center;
+      padding-top:100px;
+      overflow:hidden;
+      transition: all 0.3s;
+      background-color: #000000;
+      font-size: 45px;
+      &.active
+      {
+        display: block;
+        transition: all 0.3s;
+        position: fixed;
+        margin: 0px;
+        z-index: 2;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left:0;
+      }
     }
 
 
@@ -227,6 +250,11 @@ width: 100%;
       text-transform: uppercase;
       font-family: "Verdana", serif;
       margin-left: 49px;
+      @media(max-width: 1108px)
+      {
+        font-size: 35px;
+        margin-top: 20px;
+      }
 
     }
     &__link
@@ -236,6 +264,12 @@ width: 100%;
       letter-spacing: 0.05em;
       font-size: 16px;
       padding-bottom: 7px;
+      @media(max-width: 1108px)
+      {
+        overflow: hidden;
+        font-size: 35px;
+        margin-top: 20px;
+      }
       &.active
         {
           border-bottom:4px solid $red-color;
