@@ -22,16 +22,101 @@ body{
   padding: 0;
   overflow-x:hidden;
 }
+header{
+  display: flex;
+
+}
+
+.menu-icon {
+  //position: absolute;
+  display: none;
+
+  @media(max-width: 1108px)
+  {
+    position: unset;
+display: block;
+  position: absolute;
+    left: 50px;
+    top: 95px;
+  //  background: $fon-black;
+  //  width:70px;
+  //  height: 70px;
+    z-index: 3;
+  //  background-color: $color-acent;
+  &.active
+
+  { position: fixed;
+    &::before
+    {
+
+      transform: rotate(-45deg);
+      top:-8px;
+      background-color: $red-color;
+    }
+    &::after
+    {
+        transform: rotate(45deg);
+        top:-8px;
+        background-color: $red-color;
+        box-shadow:none;
+  }
+  }
+}
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+ span {
+  display: block;
+
+  width: 50px;
+  height: 6px;
+  background: $red-color;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2);
+   &.active{transform: scale(0);}}
+
+
+
+&::before,
+&::after
+{
+  content: "";
+  //background-color: $light-color;
+  position: absolute;
+  left:0px;
+  width: 50px;
+  height: 6px;
+  background: $red-color;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2);
+}
+&::before
+{
+  top:-15px;
+
+}
+&::after
+{
+  top:15px;
+
+}
+}
+
+
+
+
+
+
 h3
 {
-  margin:0 20px;
+
   font-family: Verdana,Verdana-Bold,MyriadPro-Regular,AdobeInvisFont;
   font-size: 24px;
   color: $darck-color;
   text-transform: uppercase;
   text-align: center;
   max-width: 911px;
-  margin: 0 auto;
+  margin: 20px auto;
   p
   {
     margin-top: 30px;
@@ -45,32 +130,50 @@ h3
 
 .page-main
 {
-  position: relative;
-  background: url("../img/bg_head.png");
-  //background-size: 150%;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  height:895px;
-  svg
+
+  &-bg
   {
+
+    height: 1050px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/bg_head.png');
+
+  @media(max-width: 800px)
+  {
+  background-size: auto;
+  }
+}
+  &__svg
+  {
+    //margin-top: 170px;
+    position: relative;
     @media(max-width: 800px)
     {
     display: none;
+    }
+    img{
+      position: absolute;
+      bottom: -1px;
+      background-size: contain;
+      width: 100%;
     }
   }
 
   &-overlay
   {
-
+  //  position: relative;
     background: $podlozhka;
-    width: 100%;
-    height: 99%;
+      height: 100%;
+    background-size: contain;
+
   }
   &__img
   {
     display: block;
     position: absolute;
-    top:310px;
+    //top:310px;
     bottom:0px;
   }
 }
@@ -82,9 +185,14 @@ h3
 
 .header
 {
-
+display: flex;
+width: 100%;
+@media(max-width: 1108px)
+{margin-bottom: 80px;}
   &__logo
   {
+    position: absolute;
+    left:200px;
     margin:0 15px;
     width: 144px;
     height:25px;
@@ -94,27 +202,23 @@ h3
     background-position: bottom;
     @media(max-width: 800px)
     {
+      display: block;
     margin: 0 auto;
     }
 
   }
   &-list
   {
-    margin:0 15px;
-    margin-top: -20px;
+    margin-left: 450px;
+    margin-top: 50px;
     list-style-type: none;
     display: flex;
     line-height: 50px;
     justify-content: flex-end;
-    @media(max-width: 800px)
+    @media(max-width: 1108px)
     {
-      margin-top: 20px;
-      flex-flow: wrap;
-    justify-content: center;
-    }
-    @media(max-width: 333px)
-    {
-      justify-content: left;
+
+      display:none;
     }
 
 
@@ -148,11 +252,12 @@ h3
   .head-info
   {
     margin:0 15px;
-    margin-top: 181px;
+  margin-top: 181px;
 @media(max-width: 573px)
 {
   margin-top: 81px;
 }
+
     &-text
     {
 
@@ -194,6 +299,7 @@ h3
 
   .our-servises
   {
+    position:relative;
     margin-top:0px;
     margin-bottom: 10px;
     &-items
@@ -327,22 +433,20 @@ h3
     }
   }
 .form-accent
-{  &_bg
+{
+  background: url('../img/accentbg2.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+   &_bg
   {
 
   background: url('../img/accentbg1.png');
-  background-size: 130%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  @media(max-width: 850px)
-  {
-    background: url('../img/accentbg1_mobile.jpg');
-  }
-}
-background: url('../img/accentbg2.png');
-  background-repeat: no-repeat;
 
-  background-attachment: scroll;
+}
+
   &-play
   {
     &__bg
@@ -407,6 +511,7 @@ background: url('../img/accentbg2.png');
     {
       width: 131px;
       margin-right: 20px;
+      margin-bottom: 49px;
     }
   }
 
@@ -425,6 +530,7 @@ background: url('../img/accentbg2.png');
     background: url('../img/dots.svg');
     width: 100%;
     height: 100%;
+    background-size: contain;
   }
 }
 .about-us
@@ -771,11 +877,10 @@ margin-bottom:27px;
   }
 
   position: relative;
-  background:$darck-color url("../img/bg_foot.png");
-  //background-attachment: scroll;
-  background-repeat: no-repeat;
-  height: 805px;
-  margin-top: 80px;
+    background-image: url('../img/bg_foot.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 80px;
 &-content
 {
   @media(max-width:1018px)

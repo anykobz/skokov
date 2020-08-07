@@ -32,7 +32,9 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<?php
+include('../styles/burger.scss')
+?>
 
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 <link rel="stylesheet" href="styles/main.css">
@@ -44,12 +46,10 @@
   <header>
 
     <div class="header">
+      <div id="burger" class="menu-icon">
+    <span id="burger_line"></span>
+  </div>
       <div class="wrap">
-        <div class="header">
-
-          <div id="burger" class="menu-icon">
-        <span id="burger_line"></span>
-      </div>
     <div class="header__logo"></div>
       <div>
         <ul class="header-list">
@@ -515,11 +515,6 @@ subscribe to a newsletter or connect with us on social media.
   ]
 
   });
-  $('#burger').click(function(event)
-{
-  $('#menu, #burger, #burger_line').toggleClass('active');
-
-});
 
       });
         $('#ClickMore').click(function()
