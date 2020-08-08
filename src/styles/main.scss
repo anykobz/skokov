@@ -934,6 +934,7 @@ margin-bottom:27px;
       position:relative;
     input
     {
+      color: $white-text-color;
       border:none;
       background-color: transparent;
       border:1px solid $form-color;
@@ -942,9 +943,16 @@ margin-bottom:27px;
       padding-bottom:16px;
       padding-top:16px;
       margin-bottom: 14px;
+
+      &::placeholder
+      {
+        color:#AFAFAF;
+      }
+
     }
     textarea
     {
+      color: $white-text-color;
       border:none;
       background-color: transparent;
       border:1px solid $form-color;
@@ -954,6 +962,10 @@ margin-bottom:27px;
       padding-top:16px;
       margin-bottom: 14px;
       height: 191px;
+      &::placeholder
+      {
+        color:#AFAFAF;
+      }
     }
   }
 
